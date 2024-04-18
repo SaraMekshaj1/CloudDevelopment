@@ -1,0 +1,22 @@
+
+spring:
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://cornelius.db.elephantsql.com/uyxpqqnd
+    username: uyxpqqnd
+    password: pNE_biODZ5xQ3iN1oAZJGbbx-MO_x4Ui
+    hikari:
+      maximum-pool-size: 100   # Adjust this value as neede
+      connection-timeout: 30000  # Adjust this value as needed (in milliseconds)
+
+
+  # JPA properties
+  jpa:
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+# Server configuration
+server:
+  port: 8088
+
+  
