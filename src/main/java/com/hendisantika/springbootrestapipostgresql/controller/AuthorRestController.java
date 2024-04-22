@@ -1,6 +1,4 @@
 package com.hendisantika.springbootrestapipostgresql.controller;
-
-
 import com.hendisantika.springbootrestapipostgresql.entity.Author;
 import com.hendisantika.springbootrestapipostgresql.repository.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +39,7 @@ public class AuthorRestController {
         return new ResponseEntity<Author>(repository.findById(id).get(), HttpStatus.OK);
     }
 
-    @GetMapping(params = {"name"})
+    @GetMapping(params = { "name" })
     public ResponseEntity<Collection<Author>> findBookWithName(@RequestParam(value = "name") String name) {
         return new ResponseEntity<>(repository.findByName(name), HttpStatus.OK);
     }
@@ -68,5 +66,3 @@ public class AuthorRestController {
         repository.deleteAll();
     }
 }
-
-
