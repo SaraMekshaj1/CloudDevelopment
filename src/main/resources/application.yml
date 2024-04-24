@@ -3,9 +3,9 @@ spring:
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://cornelius.db.elephantsql.com/uyxpqqnd
-    username: uyxpqqnd
-    password: pNE_biODZ5xQ3iN1oAZJGbbx-MO_x4Ui
+    url: jdbc:postgresql://flora.db.elephantsql.com/vsuxeqni
+    username: vsuxeqni
+    password: Mm-3oHYT8YwaAvZobMvp0J1AVEPVT46V
     hikari:
       maximum-pool-size: 100   # Adjust this value as neede
       connection-timeout: 30000  # Adjust this value as needed (in milliseconds)
