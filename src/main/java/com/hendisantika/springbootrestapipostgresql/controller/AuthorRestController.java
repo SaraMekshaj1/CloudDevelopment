@@ -84,7 +84,7 @@ public class AuthorRestController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteAuthorWithId(@PathVariable Long id) {
+     public ResponseEntity<Void> deleteAuthorWithId(@PathVariable Long id) {
         logger.info("User requested to delete author with id: {}", id);
         repository.deleteById(id);
         logger.info("Author deleted with id: {}", id);
@@ -92,7 +92,7 @@ public class AuthorRestController {
     }
 
     @DeleteMapping
-    public void deleteAllAuthor() {
+    public ResponseEntity<Void> deleteAllAuthors() {
         logger.info("User requested to delete all authors");
         repository.deleteAll();
         logger.info("All authors deleted");
