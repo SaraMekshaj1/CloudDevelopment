@@ -13,15 +13,9 @@ public class Author {
     private String name;
     private String lastName;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-
-    @Column(name = "Value")
-  
-
-    public Author(String name, String lastName, Long id) {
+    public Author(String name, String lastName) {
         this.name = name;
         this.lastName = lastName;
-        this.id=id;
     }
 
     public Author() {
@@ -47,15 +41,15 @@ public class Author {
         return id;
     }
 
-    public void setId( Long id){
-        this.id=id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "Author{" +
-                ", name='" + name + '\'' +
-                ", last name='" + lastName + '\'' +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", id=" + id +
                 '}';
     }
