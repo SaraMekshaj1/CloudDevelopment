@@ -51,7 +51,7 @@ public class AuthorRestController {
         Author currentAuthor = currentAuthorOpt.get();
         currentAuthor.setName(author.getName());
         currentAuthor.setLastName(author.getLastName());
-        currentAuthor.setId(author.getId());
+        currentAuthor.setBookTitles(author.getBooks());
 
         return new ResponseEntity<>(repository.save(currentAuthor), HttpStatus.OK);
     }
