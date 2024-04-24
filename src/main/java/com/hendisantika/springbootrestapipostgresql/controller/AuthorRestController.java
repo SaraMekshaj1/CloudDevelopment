@@ -35,29 +35,29 @@ public class AuthorRestController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Author> getBookWithId(@PathVariable Long id) {
+    public ResponseEntity<Author> getAuthorWithId(@PathVariable Long id) {
         return new ResponseEntity<Author>(repository.findById(id).get(), HttpStatus.OK);
     }
 
     @GetMapping(params = { "name" })
-    public ResponseEntity<Collection<Author>> findBookWithName(@RequestParam(value = "name") String name) {
+    public ResponseEntity<Collection<Author>> findAuthorWithName(@RequestParam(value = "name") String name) {
         return new ResponseEntity<>(repository.findByName(name), HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Author> updateBookFromDB(@PathVariable("id") long id, @RequestBody Author author) {
+    public ResponseEntity<Author> updateAuthorFromDB(@PathVariable("id") long id, @RequestBody Author author) {
 
         Optional<Author> currentAuthorOpt = repository.findById(id);
-        Author currentBook = currentAuthorOpt.get();
-        currentBook.setName(author.getName());
-        currentBook.setLastName(author.getLastName());
-        currentBook.setIsbn(author.getIsbn());
+        Author currentAuthor = currentAuthorOpt.get();
+        currentAuthor.setName(author.getName());
+        currentAuthor.setLastName(author.getLastName());
+        currentAuthor.setId(author.getId());
 
-        return new ResponseEntity<>(repository.save(currentBook), HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(currentAuthor), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteBookWithId(@PathVariable Long id) {
+    public void deleteAuthorWithId(@PathVariable Long id) {
         repository.deleteById(id);
     }
 
