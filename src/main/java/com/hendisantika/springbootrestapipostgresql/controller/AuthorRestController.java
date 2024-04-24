@@ -72,8 +72,8 @@ public class AuthorRestController {
         if (currentAuthorOpt.isPresent()) {
             Author currentAuthor = currentAuthorOpt.get();
             currentAuthor.setName(author.getName());
-            currentAuthor.setIsbn(author.getIsbn());
-            currentAuthor.setMbiemer(author.getMbiemer());
+            currentAuthor.setBookTitles(author.getBooks());
+            currentAuthor.setLastName(author.getLastName());
             Author updatedAuthor = repository.save(currentAuthor);
             logger.info("Author updated: {}", updatedAuthor);
             return new ResponseEntity<>(updatedAuthor, HttpStatus.OK);
