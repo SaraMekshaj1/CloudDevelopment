@@ -5,7 +5,11 @@ Adding an entity Author, a repository interface AuthorRepository, and a controll
 
 ##Testing using Postman: 
 ![image](https://github.com/SaraMekshaj1/ZhvillimAplikacioniNeCloud/assets/153858360/d42fa81c-2796-484e-b91e-a8de0fa673bf)
-![image](https://github.com/SaraMekshaj1/ZhvillimAplikacioniNeCloud/assets/153858360/e4429517-9086-435c-bf1d-63baf332e40e)
+
+![image](https://github.com/SaraMekshaj1/CloudDevelopment/assets/153858360/0b9a7eb4-2b1c-4e86-9a81-6518dfcfa8d9)
+
+#Task 3: Building and pushing to DockerHub: 
+![image](https://github.com/SaraMekshaj1/CloudDevelopment/assets/153858360/669c4323-4a39-4327-be98-83d905c126ca)
 
 
 
