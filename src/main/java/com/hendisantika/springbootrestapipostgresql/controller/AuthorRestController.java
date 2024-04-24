@@ -36,10 +36,10 @@ public class AuthorRestController {
 
     @GetMapping
     public ResponseEntity<Collection<Author>> getAllAuthors() {
-        logger.info("User requested to add author: {}", author);
-        Author savedAuthor = repository.save(author);
-        logger.info("Author added: {}", savedAuthor);
-        return new ResponseEntity<>(savedAuthor, HttpStatus.OK);
+        logger.info("User requested to fetch all authors");
+        Collection<Author> authors = repository.findAll();
+        logger.info("Fetched {} authors", authors.size());
+        return new ResponseEntity<>(authors, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
