@@ -14,14 +14,14 @@ public class Author {
     private String lastName;
 
     @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "isbn")
-    @Column(name = "Value")
-    private List<String> isbn = new ArrayList<>();
 
-    public Author(String name, String lastName, List<String> isbn) {
+    @Column(name = "Value")
+  
+
+    public Author(String name, String lastName, Long id) {
         this.name = name;
         this.lastName = lastName;
-        this.isbn = isbn;
+        this.id=id;
     }
 
     public Author() {
@@ -43,12 +43,12 @@ public class Author {
         this.lastName = lastName;
     }
 
-    public List<String> getIsbn() {
-        return isbn;
+    public Long getId() {
+        return id;
     }
 
-    public void setIsbn(List<String> isbn) {
-        this.isbn = isbn;
+    public void setId( Long id){
+        this.id=id;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class Author {
         return "Author{" +
                 ", name='" + name + '\'' +
                 ", last name='" + lastName + '\'' +
-                ", isbn=" + isbn +
+                ", id=" + id +
                 '}';
     }
 }
