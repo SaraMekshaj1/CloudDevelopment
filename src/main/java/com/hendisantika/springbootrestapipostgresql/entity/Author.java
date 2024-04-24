@@ -15,6 +15,7 @@ public class Author {
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "booksTitles")
     @Column(name = "Value")
+    private List<String>  booksTitles = new ArrayList<>();
 
   public Author(String name, String lastName, List<String> booksTitles) {
         this.name = name;
