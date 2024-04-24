@@ -13,13 +13,13 @@ public class Author {
     private String name;
     private String lastName;
     @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "lastName")
+    @CollectionTable(name = "booksTitles")
     @Column(name = "Value")
 
-  public Author(String name, String lastName, Long id) {
+  public Author(String name, String lastName, List<String> booksTitles) {
         this.name = name;
         this.lastName = lastName;
-        this.id=id;
+        this. booksTitles= booksTitles;
   }
     public Author() {
     }
@@ -48,11 +48,19 @@ public class Author {
         this.id = id;
     }
 
+    public List<String> getBooks(){
+        return  booksTitles;
+    }
+    public void setBookTitles(List<String>booksTitles){
+        this.booksTitles=booksTitles;
+    }
+
     @Override
     public String toString() {
         return "Author{" +
                 "name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", books='" + booksTitles + '\'' +
                 ", id=" + id +
                 '}';
     }
