@@ -13,11 +13,11 @@ public class Author {
     private String name;
     private String lastName;
 
-    public Author(String name, String lastName) {
+  public Author(String name, String lastName, Long id) {
         this.name = name;
         this.lastName = lastName;
-    }
-
+        this.id=id;
+  }
     public Author() {
     }
 
