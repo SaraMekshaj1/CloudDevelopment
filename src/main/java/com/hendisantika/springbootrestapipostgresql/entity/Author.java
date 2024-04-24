@@ -12,6 +12,9 @@ public class Author {
     private Long id;
     private String name;
     private String lastName;
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "lastName")
+    @Column(name = "Value")
 
   public Author(String name, String lastName, Long id) {
         this.name = name;
