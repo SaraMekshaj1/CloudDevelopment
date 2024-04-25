@@ -9,15 +9,23 @@ Adding an entity Author, a repository interface AuthorRepository, and a controll
 ![image](https://github.com/SaraMekshaj1/CloudDevelopment/assets/153858360/0b9a7eb4-2b1c-4e86-9a81-6518dfcfa8d9)
 
 #Task 3: Building and pushing to DockerHub: 
-![image](https://github.com/SaraMekshaj1/CloudDevelopment/assets/153858360/669c4323-4a39-4327-be98-83d905c126ca)
+![image](https://github.com/SaraMekshaj1/CloudDevelopment/assets/153858360/e6623198-368e-4c05-a87b-e91d5b3469dd)
+
+##Adding Logs
+![image](https://github.com/SaraMekshaj1/CloudDevelopment/assets/153858360/e508962e-cac0-44f9-8ad5-36e988b3b2e0)
 
 
 
 
+
+
+
+
+
+
+*initial readme*
 # spring-boot-rest-api-postgresql
-
 #### Plain REST API CRUD with Spring Boot and PostgreSQL.
-
 Technology stack:
 
 * Spring Boot;
