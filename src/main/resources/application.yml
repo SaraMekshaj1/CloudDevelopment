@@ -1,0 +1,47 @@
+
+spring:
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://flora.db.elephantsql.com/vsuxeqni
+    username: vsuxeqni
+    password: Mm-3oHYT8YwaAvZobMvp0J1AVEPVT46V
+    hikari:
+      maximum-pool-size: 100   # Adjust this value as neede
+      connection-timeout: 30000  # Adjust this value as needed (in milliseconds)
+
+
+  # JPA properties
+  jpa:
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+# Server configuration
+server:
+  port: 8088
+
+
+  # Log4j configuration
+logging:
+  level:
+    root: INFO
+  file:
+    name: logs/app.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  loggers:
+    file:
+      name: FILE
+  appenders:
+    file:
+      type: File
+      name: FILE
+      fileName: "${user.dir}/logs/app.log"
+      pattern: "${logging.pattern.file}"
+    console:
+      type: Console
+      name: STDOUT
+      layout:
+        pattern: "${logging.pattern.console}"
+
+  
