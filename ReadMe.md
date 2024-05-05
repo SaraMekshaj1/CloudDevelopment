@@ -5,6 +5,5 @@ Adding an entity Author, a repository interface AuthorRepository, and a controll
 
 ##Testing using Postman: 
 ![image](https://github.com/SaraMekshaj1/ZhvillimAplikacioniNeCloud/assets/153858360/d42fa81c-2796-484e-b91e-a8de0fa673bf)
-![image](https://github.com/SaraMekshaj1/ZhvillimAplikacioniNeCloud/assets/153858360/e4429517-9086-435c-bf1d-63baf332e40e)
 
 
